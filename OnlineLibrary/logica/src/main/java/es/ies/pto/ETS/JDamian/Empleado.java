@@ -1,3 +1,5 @@
+package es.ies.pto.ETS.JDamian;
+
 public class Empleado {
     int idEmpleado;
     String nombre;
@@ -9,6 +11,6 @@ public class Empleado {
         this.idEmpleado = idEmpleado;
         this.nombre = nombre;
     }
-    
-    
+
+
 }
