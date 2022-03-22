@@ -11,7 +11,6 @@
         <module>presentacion</module>
         <module>integracion</module>
         <module>logica</module>
-        <module>moduloPuente</module>
     </modules>
     <packaging>pom</packaging>
     <name>CarpetaPadre</name>
