@@ -7,7 +7,7 @@ public class Libro{
     String autor;
     String editorial;
     /**
-     * Constructor con 5 parametros
+     * Constructor con 5 parámetros
      */
     public Libro(String isbn, String titulo, int fechaPublicacion, String autor, String editorial) {
         this.isbn = isbn;
@@ -16,5 +16,6 @@ public class Libro{
         this.autor = autor;
         this.editorial = editorial;
     }
+    
 
 }
