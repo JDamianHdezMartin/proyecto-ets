@@ -9,8 +9,8 @@ public class Usuario {
     /**
      * Constructor pordefecto
      */
-    public Usuario() {
-    }
+    public Usuario() {}
+    
 
     /**
      * Constructor con 4 variables
@@ -73,4 +73,5 @@ public class Usuario {
 
     }
 }
+
 

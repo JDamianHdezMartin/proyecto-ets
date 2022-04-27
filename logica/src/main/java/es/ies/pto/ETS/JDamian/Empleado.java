@@ -3,6 +3,8 @@ package es.ies.pto.ETS.JDamian;
 public class Empleado {
     int idEmpleado;
     String nombre;
+    //Se necesita una estructura que almacene datos de forma ordenada
+    //un Hashmap estaría bien, es una estructura ordenada y permite búsquedas instantáneas
 
     /**
      * Constructor con dos atributos
@@ -27,13 +29,13 @@ public class Empleado {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public void anadirLibro(){
+    public void anadirLibro(String isbn){
 
     }
-    public void modificarLibro(){
+    public void modificarLibro(String isbn){
 
     }
-    public void eliminarLibro(){
+    public void eliminarLibro(String isbn){
 
     }
     public void eliminarUsuario(){
