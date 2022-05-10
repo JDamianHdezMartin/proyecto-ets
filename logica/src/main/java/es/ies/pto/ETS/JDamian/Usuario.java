@@ -11,7 +11,6 @@ public class Usuario {
      */
     public Usuario() {}
     
-
     /**
      * Constructor con 4 variables
      * @param nombre de la clase
@@ -57,6 +56,7 @@ public class Usuario {
     public void setCorreoElectrónico(String correoElectrónico) {
         this.correoElectrónico = correoElectrónico;
     }
+
     public void buscarLibro(){
 
     }

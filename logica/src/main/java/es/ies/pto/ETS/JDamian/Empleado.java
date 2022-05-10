@@ -29,16 +29,28 @@ public class Empleado {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public void anadirLibro(String isbn){
-
+    /**
+     * Método que agrega un libro a la base de datos
+     */
+    public void anadirLibro(String isbn, String titulo, int fechaPublicacion, String autor, String editorial){
+        
     }
+    /**
+     * Metodo que modifica los datos de un libro ya introducido en la base de datos
+     */
     public void modificarLibro(String isbn){
 
     }
+    /**
+     * Metodo que elimina un libro de la base de datos
+     */
     public void eliminarLibro(String isbn){
 
     }
-    public void eliminarUsuario(){
+    /**
+     * Metodo que elimina a un usuario usando su correo electronico
+     */
+    public void eliminarUsuario(String correoElectrónico){
 
     }
 }
