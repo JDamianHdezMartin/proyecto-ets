@@ -57,8 +57,8 @@ public class Usuario {
         this.correoElectrónico = correoElectrónico;
     }
 
-    public void buscarLibro(){
-
+    public void buscarLibro(String isbn){
+        
     }
     public void registrarse(){
 
