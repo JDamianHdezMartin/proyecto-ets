@@ -62,7 +62,7 @@ public class Usuario {
     public void setCorreoElectrónico(String correoElectrónico) {
         this.correoElectronico = correoElectrónico;
     }
-
+    //este metodo no haria falta, ya esta en la clase Biblioteca
     public void buscarLibro(String isbn){
         
     }
@@ -71,8 +71,9 @@ public class Usuario {
         bt.usuarios.add(u);
 
     }
-    public void darseDeBaja(){
-
+    public void darseDeBaja(String dni){
+        //aquí hay un error
+        bt.usuarios.remove(dni);
     }
     public void comprarLibro(){
 
