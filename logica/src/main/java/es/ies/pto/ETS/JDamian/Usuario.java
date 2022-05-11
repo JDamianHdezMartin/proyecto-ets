@@ -1,11 +1,12 @@
 package es.ies.pto.ETS.JDamian;
 
 public class Usuario {
+    String dni;
     String nombre;
     String apellidos;
     int contrasenia;
-    String correoElectrónico;
-
+    String correoElectronico;
+    Biblioteca bt;
     /**
      * Constructor pordefecto
      */
@@ -18,11 +19,16 @@ public class Usuario {
      * @param contrasenia de la clase
      * @param correoElectrónico de la clase
      */
-    public Usuario(String nombre, String apellidos, int contrasenia, String correoElectrónico) {
+    public Usuario(String dni, String nombre, String apellidos, int contrasenia, String correoElectrónico) {
+        this.dni = dni;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.contrasenia = contrasenia;
-        this.correoElectrónico = correoElectrónico;
+        this.correoElectronico = correoElectrónico;
+    }
+
+    public String getDni(){
+        return dni;
     }
 
     public String getNombre() {
@@ -50,17 +56,19 @@ public class Usuario {
     }
 
     public String getCorreoElectrónico() {
-        return correoElectrónico;
+        return correoElectronico;
     }
 
     public void setCorreoElectrónico(String correoElectrónico) {
-        this.correoElectrónico = correoElectrónico;
+        this.correoElectronico = correoElectrónico;
     }
 
     public void buscarLibro(String isbn){
         
     }
-    public void registrarse(){
+    public void registrarse(String dni, String nombre, String apellidos, int contrasenia, String correoElectronico){
+        Usuario u = new Usuario(dni,nombre,apellidos,contrasenia,correoElectronico);
+        bt.usuarios.add(u);
 
     }
     public void darseDeBaja(){

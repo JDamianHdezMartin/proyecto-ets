@@ -1,11 +1,15 @@
 package es.ies.pto.ETS.JDamian;
 
-public class Libro{
+import java.util.Date;
+
+public class Libro {
+
     String isbn;
     String titulo;
     Date fechaPublicacion;
     String autor;
     String editorial;
+
     /**
      * Constructor con 5 parámetros
      */
@@ -17,47 +21,43 @@ public class Libro{
         this.editorial = editorial;
     }
 
-	public void setIsbn (String isbn) {
-		this.isbn = isbn,;
-	}
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
 
-	public = getIsbn() {
-		return this.isbn;
-	}
+    public String getIsbn() {
+        return this.isbn;
+    }
 
-	public void setIsbn(String isbn) {
-		this.isbn = isbn;
-	}
+    public String getTitulo() {
+        return this.titulo;
+    }
 
-	public void getTitulo() {
-		return this.titulo;
-	}
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
 
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
-	}
+    public Date getFechaPublicacion() {
+        return this.fechaPublicacion;
+    }
 
-	public void getFechaPublicacion() {
-		return this.fechaPublicacion;
-	}
+    public void setFechaPublicacion(Date fechaPublicacion) {
+        this.fechaPublicacion = fechaPublicacion;
+    }
 
-	public void setFechaPublicacion(Date fechaPublicacion) {
-		this.fechaPublicacion = fechaPublicacion;
-	}
+    public String getAutor() {
+        return this.autor;
+    }
 
-	public void getAutor() {
-		return this.autor;
-	}
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
 
-	public void setAutor(String autor) {
-		this.autor = autor;
-	}
+    public String getEditorial() {
+        return this.editorial;
+    }
 
-	public void getEditorial() {
-		return this.editorial;
-	}
-
-	public void setEditorial(String editorial) {
-		this.editorial = editorial;
-	}
+    public void setEditorial(String editorial) {
+        this.editorial = editorial;
+    }
 }
