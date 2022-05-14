@@ -1,19 +1,26 @@
 package es.ies.pto.ETS.JDamian;
 
+import java.util.ArrayList;
+
 public class Usuario {
+
     String dni;
     String nombre;
     String apellidos;
     int contrasenia;
     String correoElectronico;
+    ArrayList<Libro> carrito = new ArrayList<>();
     Biblioteca bt;
+
     /**
      * Constructor pordefecto
      */
-    public Usuario() {}
-    
+    public Usuario() {
+    }
+
     /**
      * Constructor con 4 variables
+     *
      * @param nombre de la clase
      * @param apellidos de la clase
      * @param contrasenia de la clase
@@ -27,7 +34,7 @@ public class Usuario {
         this.correoElectronico = correoElectrónico;
     }
 
-    public String getDni(){
+    public String getDni() {
         return dni;
     }
 
@@ -62,25 +69,29 @@ public class Usuario {
     public void setCorreoElectrónico(String correoElectrónico) {
         this.correoElectronico = correoElectrónico;
     }
+
     //este metodo no haria falta, ya esta en la clase Biblioteca
-    public void buscarLibro(String isbn){
-        
+    public Libro buscarLibro(String isbn) {
+        return bt.libros.get(isbn);
+
     }
-    public void registrarse(String dni, String nombre, String apellidos, int contrasenia, String correoElectronico){
-        Usuario u = new Usuario(dni,nombre,apellidos,contrasenia,correoElectronico);
+
+    public void registrarse(String dni, String nombre, String apellidos, int contrasenia, String correoElectronico) {
+        Usuario u = new Usuario(dni, nombre, apellidos, contrasenia, correoElectronico);
         bt.usuarios.add(u);
 
     }
-    public void darseDeBaja(String dni){
+
+    public void darseDeBaja(String dni) {
         //aquí hay un error
         bt.usuarios.remove(dni);
     }
-    public void comprarLibro(){
 
+    public void comprarLibro(Libro l) {
+        carrito.add(l);
     }
-    public void solicitarDevolucion(){
 
+    public void solicitarDevolucion(Libro l) {
+        bt.devoluciones.put(dni, l);
     }
 }
-
-

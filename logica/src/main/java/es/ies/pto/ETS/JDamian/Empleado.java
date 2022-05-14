@@ -6,6 +6,7 @@ public class Empleado {
     int idEmpleado;
     String nombre;
     Biblioteca bt;
+    Usuario u;
     //Se necesita una estructura que almacene datos de forma ordenada
     //un Hashmap estaría bien, es una estructura ordenada y permite búsquedas instantáneas
 
@@ -40,15 +41,15 @@ public class Empleado {
      * @param autor
      * @param editorial
      */
-    public void anadirLibro(String isbn, String titulo, Date fechaPublicacion, String autor, String editorial){
-        Libro l = new Libro(isbn,titulo,fechaPublicacion,autor,editorial);
+    public void anadirLibro(String isbn, String titulo, Date fechaPublicacion, String autor, String editorial,double precio){
+        Libro l = new Libro(isbn,titulo,fechaPublicacion,autor,editorial,precio);
         bt.libros.put(isbn,l);
     }
     /**
      * Metodo que modifica los datos de un libro ya introducido en la base de datos
      */
-    public void reemplazarLibro(String isbn, String titulo, Date fechaPublicacion, String autor, String editorial){
-        Libro l = new Libro(isbn, titulo,fechaPublicacion, autor, editorial);
+    public void reemplazarLibro(String isbn, String titulo, Date fechaPublicacion, String autor, String editorial,double precio){
+        Libro l = new Libro(isbn, titulo,fechaPublicacion, autor, editorial,precio);
         bt.libros.replace(isbn, l);
         
     }
@@ -65,4 +66,15 @@ public class Empleado {
     public void eliminarUsuario(String dni){
         bt.usuarios.remove(dni);
     }
+    
+    public void aceptarDevolucion(String id){
+       u.carrito.remove(bt.devoluciones.get(id));
+       bt.devoluciones.remove(id);
+    }
+    
+    
+    public void negarDevolucion(String id){
+       bt.devoluciones.remove(id);
+    }
+    
 }

@@ -9,16 +9,19 @@ public class Libro {
     Date fechaPublicacion;
     String autor;
     String editorial;
+    double precio;
 
+    public Libro() {}
     /**
      * Constructor con 5 parámetros
      */
-    public Libro(String isbn, String titulo, Date fechaPublicacion, String autor, String editorial) {
+    public Libro(String isbn, String titulo, Date fechaPublicacion, String autor, String editorial,double precio) {
         this.isbn = isbn;
         this.titulo = titulo;
         this.fechaPublicacion = fechaPublicacion;
         this.autor = autor;
         this.editorial = editorial;
+        this.precio = precio;
     }
 
     public void setIsbn(String isbn) {
@@ -60,4 +63,14 @@ public class Libro {
     public void setEditorial(String editorial) {
         this.editorial = editorial;
     }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+    
+    
 }
